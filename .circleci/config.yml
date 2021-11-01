@@ -20,7 +20,9 @@ jobs:
             - ~/.cache/yarn
 
       # run tests
-      - run: yarn test && yarn prod:build
+      - run:
+          name: Run yarn test
+          command: yarn test && yarn prod:build
 
 workflows:
   main:
