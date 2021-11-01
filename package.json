@@ -10,7 +10,7 @@
     "prod:start": "cross-env NODE_ENV=production pm2 start lib/server && pm2 logs",
     "prod:stop": "pm2 delete server",
     "lint": "eslint src webpack.config.babel.js --ext .js,.jsx",
-    "test": "yarn lint && flow flow-typed && jest --coverage",
+    "test": "yarn lint && flow flow-typed && jest --coverage && codecov --token=51591c5a-a5f5-4da7-be43-6739d8bd6605",
     "precommit": "yarn test",
     "prepush": "yarn test && yarn prod:build"
   },
@@ -50,6 +50,7 @@
     "babel-loader": "^8.2.3",
     "babel-plugin-flow-react-proptypes": "^26.0.0",
     "babel-preset-react": "^6.24.1",
+    "codecov": "^3.8.3",
     "cross-env": "^7.0.3",
     "eslint": "7.2.0",
     "eslint-config-airbnb": "18.2.1",
