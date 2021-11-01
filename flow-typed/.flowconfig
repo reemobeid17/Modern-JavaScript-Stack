@@ -1,0 +1,9 @@
+[libs]
+declare var module : {
+  hot : {
+    accept(path:string, callback:() => void): void;
+  };
+};
+
+[ignore]
+.*/node_modules/jss/.*

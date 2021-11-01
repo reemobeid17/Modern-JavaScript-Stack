@@ -1,0 +1,27 @@
+{
+  "env": {
+    "jest": true,
+    "browser": true
+  },
+  "extends": ["airbnb", "plugin:flowtype/recommended"],
+  "plugins": ["flowtype", "compat"],
+  "parser": "babel-eslint",
+  "rules": {
+    "semi": [2, "always"],
+    "quotes": ["error", "double"],
+    "no-unexpected-multiline": 2,
+    "compat/compat": 2,
+    "comma-dangle": ["error", "only-multiline"],
+    "implicit-arrow-linebreak": "off",
+    "operator-linebreak": "off",
+    "indent": "off",
+    "object-curly-newline": "off",
+    "react/jsx-one-expression-per-line": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "999.999.999"
+    },
+    "polyfills": ["fetch"]
+  }
+}
