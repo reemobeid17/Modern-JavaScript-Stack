@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@4.7.0
 jobs:
-  test:
+  build:
     docker:
       - image: node
     steps:
@@ -14,7 +14,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm install
+      - run: yarn
 
       - save_cache:
           paths:
@@ -23,3 +23,8 @@ jobs:
 
       # run tests
       - run: yarn test && yarn prod:build
+
+workflows:
+  main:
+    jobs:
+      - build
