@@ -21,7 +21,7 @@ jobs:
 
       # run tests
       - run:
-          name: Run yarn test
+          name: Run Yarn Test
           command: yarn test && yarn prod:build
 
 workflows:
