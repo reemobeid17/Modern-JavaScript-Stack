@@ -1,4 +1,4 @@
 {
   "presets": ["@babel/preset-env", "@babel/preset-flow", "@babel/preset-react"],
-  "plugins": ["flow-react-proptypes"]
+  "plugins": ["flow-react-proptypes", "@babel/transform-runtime"]
 }
