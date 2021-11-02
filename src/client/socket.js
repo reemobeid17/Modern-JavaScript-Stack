@@ -13,8 +13,7 @@ import {
 const socket = socketIOClient(window.location.host);
 
 /* eslint-disable no-console */
-// eslint-disable-next-line no-unused-vars
-const setUpSocket = (store: Object) => {
+const setUpSocket = () => {
   socket.on(IO_CONNECT, () => {
     console.log("[socket.io] Connected.");
     socket.emit(IO_CLIENT_JOIN_ROOM, "hello-1234");
